@@ -51,17 +51,3 @@ folders:
     - map: ~/code
       to: /home/vagrant/code
       
-If you are only creating a few sites, this generic mapping will work just fine. However, as the number of sites continue to grow, you may begin to experience performance problems. This problem can be painfully apparent on low-end machines or projects that contain a very large number of files. If you are experiencing this issue, try mapping every project to its own Vagrant folder:
-folders:
-    - map: ~/code/project1
-      to: /home/vagrant/code/project1
-
-    - map: ~/code/project2
-      to: /home/vagrant/code/project2
-      
-To enable NFS, you only need to add a simple flag to your synced folder configuration:
-
-folders:
-    - map: ~/code
-      to: /home/vagrant/code
-      type: "nfs"
